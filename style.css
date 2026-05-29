@@ -287,6 +287,26 @@ figcaption {
   font-size: 0.92rem;
 }
 
+/* -------- AEIOU observation block ------------------------ */
+.observation {
+  margin-top: 4rem;
+  padding: 2rem clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--cream-deep);
+  border-radius: 2px;
+  border-left: 3px solid var(--red);
+}
+.observation .kicker {
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  margin: 0.4rem 0 1rem;
+  max-width: 24ch;
+  line-height: 1.15;
+}
+.observation .kicker em {
+  font-style: italic;
+  color: var(--red);
+}
+.observation p { max-width: 65ch; margin: 0; }
+
 /* -------- ideation gallery ------------------------------- */
 .ideation-gallery {
   display: grid;
@@ -294,6 +314,157 @@ figcaption {
   gap: 1rem;
   margin: 1.5rem 0 3.5rem;
 }
+
+.prose-lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0 0 2rem;
+}
+
+/* -------- ideas list ------------------------------------- */
+.ideas-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.idea-row {
+  display: grid;
+  grid-template-columns: 140px 220px 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.idea-row:last-child { border-bottom: 1px solid var(--line); }
+.idea-row .eyebrow { margin: 0; }
+.idea-row h4 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+.idea-row p { margin: 0; font-size: 0.95rem; }
+.idea-row--featured {
+  background: var(--cream);
+  padding: 2rem 1.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--red);
+  border-radius: 2px;
+}
+.idea-row--featured h4 {
+  color: var(--red);
+  font-size: 1.75rem;
+}
+.idea-row--featured .idea__why {
+  grid-column: 1 / -1;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+/* -------- persona quote ---------------------------------- */
+.persona__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0 0 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--red);
+}
+.persona__quote em { font-style: italic; }
+
+/* -------- flow steps (prototype) ------------------------- */
+.flow {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin: 2rem 0 4rem;
+  align-items: start;
+}
+.flow__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+}
+.flow__steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.flow__steps li:last-child { border-bottom: 1px solid var(--line); }
+.flow__num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--red);
+  line-height: 1;
+  padding-top: 0.15rem;
+}
+.flow__steps h4 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+.flow__steps h4 em { font-style: italic; color: var(--red); }
+.flow__steps p { margin: 0; font-size: 0.95rem; }
+.flow__image { margin: 0; }
+
+/* -------- conversation cards ----------------------------- */
+.cards-section {
+  margin: 4rem 0 3rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 4px;
+}
+.cards-section .eyebrow { color: var(--cream); opacity: 0.8; }
+.cards-section .display { color: var(--cream); margin: 0 0 2.5rem; }
+.cards-section .dot { color: var(--red); }
+
+.cards-rows {
+  display: grid;
+  gap: 2.5rem;
+}
+.cards-row__label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 1rem;
+}
+.card-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1rem;
+  align-items: flex-start;
+}
+.card {
+  background: var(--cream);
+  color: var(--ink);
+  padding: 1rem 1.15rem;
+  border-radius: 3px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  max-width: 22rem;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25), 0 8px 18px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease;
+}
+.card:hover { transform: translateY(-2px) rotate(0deg) !important; }
+.card--a { transform: rotate(-1.6deg); }
+.card--b { transform: rotate(1.2deg); }
+.card--c { transform: rotate(-0.7deg); background: #F7EFDB; }
 
 /* -------- selection matrix ------------------------------- */
 .matrix {
@@ -469,7 +640,8 @@ figcaption {
   .hero__grid,
   .two-col,
   .two-col--asymmetric,
-  .two-col--flow {
+  .two-col--flow,
+  .flow {
     grid-template-columns: 1fr;
   }
   .three-col,
@@ -480,6 +652,10 @@ figcaption {
   }
   .ideation-gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .idea-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
   .footer__grid {
     grid-template-columns: 1fr;
