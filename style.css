@@ -668,7 +668,10 @@ figcaption {
   .ideation-gallery { grid-template-columns: 1fr; }
 }
 
-/* -------- real images: shared styling -------------------- */
+/* -------- real images: shared styling --------------------
+   width: 100% + height: auto + no aspect-ratio so every image
+   shows at its native ratio with nothing cropped.
+   ------------------------------------------------------- */
 .hero__image img,
 .flow__image img,
 .observation__image img,
@@ -676,16 +679,11 @@ figcaption {
 .ideation-gallery img,
 .dev-gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2px;
+  height: auto;
   display: block;
+  border-radius: 2px;
+  background: var(--cream-deep);
 }
-
-.hero__image img            { aspect-ratio: 3 / 4; }
-.flow__image img            { aspect-ratio: 3 / 4; }
-.ideation-gallery img       { aspect-ratio: 4 / 3; }
-.dev-gallery img            { aspect-ratio: 4 / 3; }
 
 .hero__image figure,
 .flow__image figure,
@@ -723,10 +721,10 @@ figcaption {
 .observation__image { margin: 0; }
 .observation__image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   border-radius: 2px;
   display: block;
+  background: var(--cream-deep);
 }
 .observation__image figcaption {
   font-size: 0.8rem;
@@ -747,13 +745,12 @@ figcaption {
   align-items: stretch;
 }
 .idea-row__content { display: flex; flex-direction: column; }
-.idea-row__image { margin: 0; height: 100%; }
+.idea-row__image { margin: 0; align-self: center; }
 .idea-row__image img {
   width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   border-radius: 2px;
+  background: var(--cream-deep);
 }
 
 /* Responsive: collapse new 2-col layouts */
@@ -862,9 +859,11 @@ figcaption {
   .hero__image .image-placeholder,
   .hero__image img {
     width: 100%;
-    height: 100%;
+    max-height: 8.5in;
+    height: auto !important;
     aspect-ratio: auto !important;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--cream-deep) !important;
   }
 
   /* RESEARCH (Poster 2) */
@@ -905,9 +904,12 @@ figcaption {
     gap: 0.25in !important;
   }
   .observation__image img {
-    height: 2.2in;
+    max-height: 2.4in;
+    height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
   .observation__image figcaption { font-size: 7pt; margin-top: 0.04in; }
 
@@ -927,8 +929,11 @@ figcaption {
   .ideation-gallery--three { grid-template-columns: repeat(3, 1fr) !important; }
   .ideation-gallery .image-placeholder,
   .ideation-gallery img {
-    height: 1.4in;
+    max-height: 1.7in;
+    height: auto !important;
     aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
   .ideation-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
   .ideas-list { gap: 0; margin-top: 0.1in; }
@@ -951,9 +956,12 @@ figcaption {
     gap: 0.25in !important;
   }
   .idea-row__image img {
-    height: 2.2in;
+    max-height: 2.6in;
+    height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
 
   /* PROTOTYPE (Poster 4) */
@@ -971,8 +979,12 @@ figcaption {
   .flow__steps p  { font-size: 8.5pt; }
   .flow__image .image-placeholder,
   .flow__image img {
-    height: 4.5in;
+    max-height: 4.8in;
+    height: auto !important;
+    width: 100%;
     aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
   #prototype .two-col {
     gap: 0.3in;
@@ -1012,8 +1024,11 @@ figcaption {
   }
   .dev-gallery .image-placeholder,
   .dev-gallery img {
-    height: 1.6in;
+    max-height: 2in;
+    height: auto !important;
     aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
   .dev-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
 
@@ -1028,9 +1043,12 @@ figcaption {
   .meta-list dt { font-size: 7pt; }
   #testing .hero__image .image-placeholder,
   #testing .hero__image img {
-    height: 4.2in;
+    max-height: 4.5in;
+    height: auto !important;
     width: 100%;
     aspect-ratio: auto !important;
+    object-fit: contain !important;
+    background: var(--cream-deep) !important;
   }
   .next-steps {
     margin-top: 0.15in;
