@@ -667,3 +667,261 @@ figcaption {
   .nav__links { display: none; }   /* hide nav on small screens — keep brand */
   .ideation-gallery { grid-template-columns: 1fr; }
 }
+
+
+/* =========================================================
+   PRINT — 5 landscape 11x17 posters (one per section)
+   Open the file in a browser, Cmd+P, choose "Tabloid" / 17x11
+   landscape, "Background graphics" ON.
+   ========================================================= */
+@media print {
+
+  @page {
+    size: 17in 11in;
+    margin: 0.45in;
+  }
+
+  /* Re-establish the cream backdrop on every printed sheet */
+  html, body {
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  /* Hide chrome we don't want on paper */
+  .nav,
+  .footer { display: none !important; }
+
+  /* Every top-level section is one printed page */
+  .hero,
+  .section {
+    page-break-before: always;
+    page-break-after: always;
+    break-before: page;
+    break-after: page;
+    background: var(--cream) !important;
+    padding: 0 !important;
+    border-top: none !important;
+    margin: 0 !important;
+  }
+  .hero { page-break-before: avoid; break-before: avoid; } /* first sheet */
+  .section:last-of-type { page-break-after: avoid; break-after: avoid; }
+
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Section header is compact at the top of each sheet */
+  .section__head {
+    text-align: left;
+    margin: 0 0 0.25in !important;
+    max-width: none;
+  }
+  .section__head .display {
+    font-size: 30pt !important;
+    margin-top: 0.05in;
+  }
+  .section__head .eyebrow {
+    font-size: 7.5pt;
+    margin: 0;
+  }
+
+  /* Display type scaled for print */
+  .display          { font-size: 60pt !important; line-height: 0.98; margin-bottom: 0.18in; }
+  .display--md      { font-size: 30pt !important; }
+  .display--sm      { font-size: 18pt !important; }
+  .eyebrow          { font-size: 7.5pt; margin-bottom: 0.08in; }
+  .kicker           { font-size: 14pt; margin-bottom: 0.06in; }
+  .lede             { font-size: 13pt; max-width: none; margin-bottom: 0.18in; }
+  blockquote        { font-size: 10pt; padding-left: 0.12in; margin-bottom: 0.1in; }
+
+  /* HERO (Poster 1) */
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 0.5in;
+    align-items: stretch;
+  }
+  .hero__copy { padding-top: 0; }
+  .callout {
+    margin: 0.18in 0;
+    padding: 0.12in 0.18in;
+  }
+  .callout__text { font-size: 11pt; }
+  .team__list { gap: 0.18in; }
+  .avatar { width: 36px; height: 36px; font-size: 9pt; }
+  .team__name { font-size: 9.5pt; }
+  .hero__image { margin: 0; height: 100%; }
+  .hero__image .image-placeholder,
+  .hero__image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
+    object-fit: cover;
+  }
+
+  /* RESEARCH (Poster 2) */
+  #research .three-col {
+    gap: 0.3in;
+    margin-bottom: 0.25in;
+  }
+  #research .three-col .prose p { font-size: 9.5pt; }
+  #research .kicker--center {
+    text-align: left;
+    margin-top: 0.2in;
+    font-size: 11pt;
+  }
+  .personas {
+    gap: 0.2in;
+    margin-top: 0.1in;
+  }
+  .persona__name { font-size: 14pt; margin: 0.05in 0; }
+  .persona__bio  { font-size: 9pt; margin-bottom: 0.06in; }
+  .persona__quote { font-size: 8.5pt; margin-bottom: 0.06in; padding-left: 0.08in; }
+  .persona__needs { font-size: 8.5pt; padding-top: 0.06in; }
+  .observation {
+    margin-top: 0.2in;
+    padding: 0.15in 0.2in;
+  }
+  .observation .kicker { font-size: 14pt; margin-bottom: 0.06in; }
+  .observation p { font-size: 9pt; }
+
+  /* IDEATION (Poster 3) */
+  #ideation { background: var(--cream) !important; }
+  #ideation .two-col {
+    gap: 0.3in;
+    margin-bottom: 0.18in;
+  }
+  #ideation .prose p { font-size: 9pt; }
+  .prose-lead { font-size: 11pt; margin-bottom: 0.15in; }
+  .ideation-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.1in;
+    margin: 0.1in 0 0.2in;
+  }
+  .ideation-gallery .image-placeholder,
+  .ideation-gallery img {
+    height: 1.3in;
+    aspect-ratio: auto !important;
+  }
+  .ideas-list { gap: 0; margin-top: 0.1in; }
+  .idea-row {
+    grid-template-columns: 100px 200px 1fr;
+    gap: 0.3in;
+    padding: 0.1in 0;
+  }
+  .idea-row h4 { font-size: 12pt; }
+  .idea-row p  { font-size: 9pt; }
+  .idea-row--featured {
+    padding: 0.18in 0.2in;
+    margin-top: 0.08in;
+  }
+  .idea-row--featured h4 { font-size: 16pt; }
+  .idea__why { font-size: 8.5pt; }
+
+  /* PROTOTYPE (Poster 4) */
+  .flow {
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 0.3in;
+    margin: 0.1in 0 0.2in;
+  }
+  .flow__steps li {
+    padding: 0.08in 0;
+    gap: 0.15in;
+  }
+  .flow__num { font-size: 14pt; }
+  .flow__steps h4 { font-size: 11pt; margin-bottom: 0.04in; }
+  .flow__steps p  { font-size: 8.5pt; }
+  .flow__image .image-placeholder,
+  .flow__image img {
+    height: 4.5in;
+    aspect-ratio: auto !important;
+  }
+  #prototype .two-col {
+    gap: 0.3in;
+    margin-bottom: 0.15in;
+  }
+  #prototype .prose p { font-size: 9pt; }
+
+  /* Conversation cards: lighter for print (no dark inversion)  */
+  .cards-section {
+    margin: 0.15in 0;
+    padding: 0.18in 0.2in;
+    background: var(--cream-deep) !important;
+    color: var(--ink) !important;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+  }
+  .cards-section .display { color: var(--ink) !important; margin-bottom: 0.15in; }
+  .cards-section .eyebrow { color: var(--red) !important; opacity: 1; }
+  .cards-rows { gap: 0.18in; }
+  .cards-row__label { font-size: 7.5pt; margin-bottom: 0.06in; }
+  .card-stack { gap: 0.06in 0.08in; }
+  .card {
+    font-size: 8pt;
+    padding: 0.06in 0.09in;
+    max-width: 2.4in;
+    line-height: 1.25;
+    box-shadow: none;
+    border: 1px solid var(--line);
+    transform: none !important;
+    background: var(--cream) !important;
+  }
+  .card--c { background: #F7EFDB !important; }
+  .dev-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1in;
+    margin-top: 0.1in;
+  }
+  .dev-gallery .image-placeholder,
+  .dev-gallery img {
+    height: 1.6in;
+    aspect-ratio: auto !important;
+  }
+
+  /* TESTING (Poster 5) */
+  #testing { background: var(--cream) !important; }
+  #testing .two-col {
+    gap: 0.3in;
+    margin-bottom: 0.18in;
+  }
+  #testing .prose p { font-size: 9pt; }
+  .meta-list { font-size: 9pt; gap: 0.04in 0.18in; margin-top: 0.1in; }
+  .meta-list dt { font-size: 7pt; }
+  #testing .hero__image .image-placeholder,
+  #testing .hero__image img {
+    height: 4.2in;
+    width: 100%;
+    aspect-ratio: auto !important;
+  }
+  .next-steps {
+    margin-top: 0.15in;
+    padding: 0.15in 0.2in;
+  }
+  .next-steps p { font-size: 9.5pt; }
+
+  /* Image placeholders for unfilled slots: subtle, not loud */
+  .image-placeholder {
+    border: 1px dashed var(--muted) !important;
+    background: var(--cream) !important;
+    color: var(--muted);
+    font-size: 9pt;
+    aspect-ratio: 4 / 3;
+  }
+  .image-placeholder small {
+    font-size: 6.5pt;
+    opacity: 0.6;
+  }
+
+  /* Prevent awkward orphans inside content */
+  p, li, h4 { orphans: 3; widows: 3; break-inside: avoid; }
+  .persona, .idea-row, .flow__steps li, .cards-row { break-inside: avoid; }
+
+  /* Make all images render with proper colors  */
+  img { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
