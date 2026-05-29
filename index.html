@@ -79,12 +79,8 @@
         </div>
 
         <figure class="hero__image">
-          <!-- TODO: Replace this placeholder with:
-               <img src="project-images/hero.jpg" alt="The Found Family dinner table at Stern" /> -->
-          <div class="image-placeholder image-placeholder--tall">
-            <span>Action shot</span>
-            <small>project-images/hero.jpg</small>
-          </div>
+          <img src="project-images/action-shot.jpeg"
+               alt="The Found Family table at Stern Dining" />
           <figcaption>The Found Family table at Stern Dining, May 27, 2026.</figcaption>
         </figure>
 
@@ -141,11 +137,9 @@
         <div class="personas">
 
           <article class="persona">
-            <!-- TODO: <img src="project-images/persona-sam.jpg" alt="Sam, junior at Columbae" /> -->
-            <div class="image-placeholder image-placeholder--square">
-              <span>Sam</span>
-              <small>project-images/persona-sam.jpg</small>
-            </div>
+            <img class="persona__portrait"
+                 src="project-images/sam.png"
+                 alt="Illustrated portrait of Sam" />
             <p class="eyebrow">Persona 01</p>
             <h4 class="persona__name">Sam</h4>
             <p class="persona__bio">
@@ -164,11 +158,9 @@
           </article>
 
           <article class="persona">
-            <!-- TODO: <img src="project-images/persona-annie.jpg" alt="Annie, sophomore at Pi Phi" /> -->
-            <div class="image-placeholder image-placeholder--square">
-              <span>Annie</span>
-              <small>project-images/persona-annie.jpg</small>
-            </div>
+            <img class="persona__portrait"
+                 src="project-images/annie.png"
+                 alt="Illustrated portrait of Annie" />
             <p class="eyebrow">Persona 02</p>
             <h4 class="persona__name">Annie</h4>
             <p class="persona__bio">
@@ -188,11 +180,9 @@
           </article>
 
           <article class="persona">
-            <!-- TODO: <img src="project-images/persona-natalie.jpg" alt="Natalie, freshman at Soto" /> -->
-            <div class="image-placeholder image-placeholder--square">
-              <span>Natalie</span>
-              <small>project-images/persona-natalie.jpg</small>
-            </div>
+            <img class="persona__portrait"
+                 src="project-images/natalie.png"
+                 alt="Illustrated portrait of Natalie" />
             <p class="eyebrow">Persona 03</p>
             <h4 class="persona__name">Natalie</h4>
             <p class="persona__bio">
@@ -213,19 +203,26 @@
 
         </div>
 
-        <!-- AEIOU OBSERVATION -->
-        <div class="observation">
-          <p class="eyebrow">AEIOU Observation · Arrillaga · May 8 · 12:30–1:00 PM</p>
-          <h3 class="kicker">"Almost no one ate fully <em>alone</em>."</h3>
-          <p>
-            During the lunch rush, eating was almost incidental. People were
-            there to be around other people: meals were the excuse, the room
-            was the point. Solo eaters consistently shielded themselves with
-            laptops, phones, or headphones, suggesting that being alone in a
-            social space feels exposing. People scanned the room before
-            sitting, choosing seats based on who was already there, not what
-            was open.
-          </p>
+        <!-- AEIOU OBSERVATION + EMPATHY MAP -->
+        <div class="observation observation--with-image">
+          <div class="observation__text">
+            <p class="eyebrow">AEIOU Observation · Arrillaga · May 8 · 12:30–1:00 PM</p>
+            <h3 class="kicker">"Almost no one ate fully <em>alone</em>."</h3>
+            <p>
+              During the lunch rush, eating was almost incidental. People were
+              there to be around other people: meals were the excuse, the
+              room was the point. Solo eaters consistently shielded themselves
+              with laptops, phones, or headphones, suggesting that being alone
+              in a social space feels exposing. People scanned the room
+              before sitting, choosing seats based on who was already there,
+              not what was open.
+            </p>
+          </div>
+          <figure class="observation__image">
+            <img src="project-images/Needfinding.png"
+                 alt="Empathy map: what students say, think, do, and feel about food and community" />
+            <figcaption>Empathy mapping: Food + community at Stanford.</figcaption>
+          </figure>
         </div>
 
       </div>
@@ -279,23 +276,22 @@
           We brainstormed five directions before landing on Found Family.
         </p>
 
-        <div class="ideation-gallery">
-          <div class="image-placeholder">
-            <span>Brainstorm 1</span>
-            <small>project-images/ideation-1.jpg</small>
-          </div>
-          <div class="image-placeholder">
-            <span>Brainstorm 2</span>
-            <small>project-images/ideation-2.jpg</small>
-          </div>
-          <div class="image-placeholder">
-            <span>Brainstorm 3</span>
-            <small>project-images/ideation-3.jpg</small>
-          </div>
-          <div class="image-placeholder">
-            <span>Brainstorm 4</span>
-            <small>project-images/ideation-4.jpg</small>
-          </div>
+        <div class="ideation-gallery ideation-gallery--three">
+          <figure>
+            <img src="project-images/cookingclass-sketch.png"
+                 alt="Sketch of the cooking-class idea" />
+            <figcaption>Cooking class with the chefs.</figcaption>
+          </figure>
+          <figure>
+            <img src="project-images/dinnersiblings-sketch.png"
+                 alt="Sketch of dinner siblings idea" />
+            <figcaption>Dinner siblings.</figcaption>
+          </figure>
+          <figure>
+            <img src="project-images/idea-selection.png"
+                 alt="Idea selection prioritization grid with sticky notes" />
+            <figcaption>Idea selection.</figcaption>
+          </figure>
         </div>
 
         <div class="ideas-list">
@@ -340,21 +336,27 @@
             </p>
           </article>
 
-          <article class="idea-row idea-row--featured">
-            <p class="eyebrow eyebrow--accent">Idea 05 · Selected ★</p>
-            <h4>Found Family</h4>
-            <p>
-              A monthly themed family dinner at a Stanford dining hall:
-              where each organizer brings five friends who don't know each
-              other, and each of those friends brings one more. Ten-plus
-              strangers, one table, conversation cards in the middle.
-            </p>
-            <p class="idea__why">
-              <span class="label">Why this one</span>
-              Free to test, easy to iterate, and it hits the insight most
-              directly: making the dining hall feel like a ritual instead
-              of a stop.
-            </p>
+          <article class="idea-row idea-row--featured idea-row--with-image">
+            <div class="idea-row__content">
+              <p class="eyebrow eyebrow--accent">Idea 05 · Selected ★</p>
+              <h4>Found Family</h4>
+              <p>
+                A monthly themed family dinner at a Stanford dining hall:
+                where each organizer brings five friends who don't know each
+                other, and each of those friends brings one more. Ten-plus
+                strangers, one table, conversation cards in the middle.
+              </p>
+              <p class="idea__why">
+                <span class="label">Why this one</span>
+                Free to test, easy to iterate, and it hits the insight most
+                directly: making the dining hall feel like a ritual instead
+                of a stop.
+              </p>
+            </div>
+            <figure class="idea-row__image">
+              <img src="project-images/selected-idea.JPG"
+                   alt="The Found Family table at Stern with the sign and the spread" />
+            </figure>
           </article>
 
         </div>
@@ -413,11 +415,9 @@
             </li>
           </ol>
           <figure class="flow__image">
-            <!-- TODO: <img src="project-images/flow-diagram.jpg" alt="Found Family flow" /> -->
-            <div class="image-placeholder image-placeholder--tall">
-              <span>Flow diagram or storyboard</span>
-              <small>project-images/flow-diagram.jpg</small>
-            </div>
+            <img src="project-images/hero.jpeg"
+                 alt="The Found Family dinner table mid-meal at Stern" />
+            <figcaption>The Found Family table, mid-meal.</figcaption>
           </figure>
         </div>
 
@@ -487,18 +487,21 @@
         </div>
 
         <div class="dev-gallery">
-          <div class="image-placeholder">
-            <span>Partiful invite</span>
-            <small>project-images/dev-invite.jpg</small>
-          </div>
-          <div class="image-placeholder">
-            <span>Cards on the table</span>
-            <small>project-images/dev-cards.jpg</small>
-          </div>
-          <div class="image-placeholder">
-            <span>Theme materials</span>
-            <small>project-images/dev-favorites.jpg</small>
-          </div>
+          <figure>
+            <img src="project-images/invite1.png"
+                 alt="Partiful invite for the Found Family dinner" />
+            <figcaption>Partiful invite.</figcaption>
+          </figure>
+          <figure>
+            <img src="project-images/invite2.png"
+                 alt="Partiful invite, full description" />
+            <figcaption>Invite copy.</figcaption>
+          </figure>
+          <figure>
+            <img src="project-images/sign.JPG"
+                 alt="Hand-drawn Found Family sign on the table" />
+            <figcaption>The table sign.</figcaption>
+          </figure>
         </div>
 
       </div>
@@ -535,12 +538,9 @@
             </dl>
           </div>
           <figure class="hero__image">
-            <!-- TODO: <img src="project-images/testing.jpg" alt="Found Family dinner at Stern" /> -->
-            <div class="image-placeholder image-placeholder--tall">
-              <span>Testing photo</span>
-              <small>project-images/testing.jpg</small>
-            </div>
-            <figcaption class="placeholder">[Caption from the night of the dinner.]</figcaption>
+            <img src="project-images/number-sharing.jpeg"
+                 alt="Two guests laughing as they exchange contact info after the dinner" />
+            <figcaption>Guests swapping numbers after the meal.</figcaption>
           </figure>
         </div>
 

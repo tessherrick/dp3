@@ -668,6 +668,108 @@ figcaption {
   .ideation-gallery { grid-template-columns: 1fr; }
 }
 
+/* -------- real images: shared styling -------------------- */
+.hero__image img,
+.flow__image img,
+.observation__image img,
+.idea-row__image img,
+.ideation-gallery img,
+.dev-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.hero__image img            { aspect-ratio: 3 / 4; }
+.flow__image img            { aspect-ratio: 3 / 4; }
+.ideation-gallery img       { aspect-ratio: 4 / 3; }
+.dev-gallery img            { aspect-ratio: 4 / 3; }
+
+.hero__image figure,
+.flow__image figure,
+.idea-row__image figure { margin: 0; }
+
+.ideation-gallery figure,
+.dev-gallery figure { margin: 0; }
+.ideation-gallery figcaption,
+.dev-gallery figcaption {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* Persona portraits — sketch illustrations look best with a soft frame */
+.persona__portrait {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--cream-deep);
+  border-radius: 2px;
+  display: block;
+  padding: 0.5rem;
+}
+
+/* AEIOU observation with image (2-col) */
+.observation--with-image {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
+}
+.observation--with-image .observation__text { padding: 0; }
+.observation__image { margin: 0; }
+.observation__image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+.observation__image figcaption {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+}
+
+/* Three-image ideation gallery */
+.ideation-gallery--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Featured idea row with a side image */
+.idea-row--with-image {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  align-items: stretch;
+}
+.idea-row__content { display: flex; flex-direction: column; }
+.idea-row__image { margin: 0; height: 100%; }
+.idea-row__image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Responsive: collapse new 2-col layouts */
+@media (max-width: 900px) {
+  .observation--with-image,
+  .idea-row--with-image {
+    grid-template-columns: 1fr;
+  }
+  .ideation-gallery--three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .ideation-gallery--three { grid-template-columns: 1fr; }
+}
+
 
 /* =========================================================
    PRINT — 5 landscape 11x17 posters (one per section)
@@ -768,28 +870,46 @@ figcaption {
   /* RESEARCH (Poster 2) */
   #research .three-col {
     gap: 0.3in;
-    margin-bottom: 0.25in;
+    margin-bottom: 0.2in;
   }
   #research .three-col .prose p { font-size: 9.5pt; }
   #research .kicker--center {
     text-align: left;
-    margin-top: 0.2in;
+    margin-top: 0.15in;
     font-size: 11pt;
   }
   .personas {
     gap: 0.2in;
-    margin-top: 0.1in;
+    margin-top: 0.05in;
   }
-  .persona__name { font-size: 14pt; margin: 0.05in 0; }
-  .persona__bio  { font-size: 9pt; margin-bottom: 0.06in; }
-  .persona__quote { font-size: 8.5pt; margin-bottom: 0.06in; padding-left: 0.08in; }
-  .persona__needs { font-size: 8.5pt; padding-top: 0.06in; }
+  .persona__portrait {
+    padding: 0.05in !important;
+    height: 1.4in;
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep) !important;
+    object-fit: contain !important;
+  }
+  .persona__name { font-size: 13pt; margin: 0.05in 0; }
+  .persona__bio  { font-size: 8.5pt; margin-bottom: 0.05in; }
+  .persona__quote { font-size: 8pt; margin-bottom: 0.05in; padding-left: 0.08in; }
+  .persona__needs { font-size: 8pt; padding-top: 0.05in; }
   .observation {
-    margin-top: 0.2in;
+    margin-top: 0.15in;
     padding: 0.15in 0.2in;
   }
-  .observation .kicker { font-size: 14pt; margin-bottom: 0.06in; }
-  .observation p { font-size: 9pt; }
+  .observation .kicker { font-size: 13pt; margin-bottom: 0.06in; }
+  .observation p { font-size: 8.5pt; }
+  .observation--with-image {
+    display: grid !important;
+    grid-template-columns: 1.3fr 1fr !important;
+    gap: 0.25in !important;
+  }
+  .observation__image img {
+    height: 2.2in;
+    aspect-ratio: auto !important;
+    width: 100%;
+  }
+  .observation__image figcaption { font-size: 7pt; margin-top: 0.04in; }
 
   /* IDEATION (Poster 3) */
   #ideation { background: var(--cream) !important; }
@@ -802,13 +922,15 @@ figcaption {
   .ideation-gallery {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.1in;
-    margin: 0.1in 0 0.2in;
+    margin: 0.1in 0 0.15in;
   }
+  .ideation-gallery--three { grid-template-columns: repeat(3, 1fr) !important; }
   .ideation-gallery .image-placeholder,
   .ideation-gallery img {
-    height: 1.3in;
+    height: 1.4in;
     aspect-ratio: auto !important;
   }
+  .ideation-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
   .ideas-list { gap: 0; margin-top: 0.1in; }
   .idea-row {
     grid-template-columns: 100px 200px 1fr;
@@ -823,6 +945,16 @@ figcaption {
   }
   .idea-row--featured h4 { font-size: 16pt; }
   .idea__why { font-size: 8.5pt; }
+  .idea-row--with-image {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.9fr !important;
+    gap: 0.25in !important;
+  }
+  .idea-row__image img {
+    height: 2.2in;
+    aspect-ratio: auto !important;
+    width: 100%;
+  }
 
   /* PROTOTYPE (Poster 4) */
   .flow {
@@ -883,6 +1015,7 @@ figcaption {
     height: 1.6in;
     aspect-ratio: auto !important;
   }
+  .dev-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
 
   /* TESTING (Poster 5) */
   #testing { background: var(--cream) !important; }
