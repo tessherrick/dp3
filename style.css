@@ -711,8 +711,8 @@ figcaption {
   border-bottom-color: var(--red);
 }
 
-/* -------- responsive ------------------------------------- */
-@media (max-width: 900px) {
+/* -------- responsive (screen only — never apply during print) -------- */
+@media screen and (max-width: 900px) {
   .nav__links { gap: 1rem; }
   .nav__links a { font-size: 0.7rem; letter-spacing: 0.12em; }
 
@@ -746,7 +746,7 @@ figcaption {
   }
 }
 
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .nav__links { display: none; }   /* hide nav on small screens — keep brand */
   .ideation-gallery { grid-template-columns: 1fr; }
   .flow__steps--row { grid-template-columns: 1fr; }
@@ -837,8 +837,8 @@ figcaption {
   background: var(--cream-deep);
 }
 
-/* Responsive: collapse new 2-col layouts */
-@media (max-width: 900px) {
+/* Responsive: collapse new 2-col layouts (screen only) */
+@media screen and (max-width: 900px) {
   .observation--with-image,
   .idea-row--with-image {
     grid-template-columns: 1fr;
@@ -847,7 +847,7 @@ figcaption {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .ideation-gallery--three { grid-template-columns: 1fr; }
 }
 
