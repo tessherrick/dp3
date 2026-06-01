@@ -1040,12 +1040,16 @@ figcaption {
     gap: 0.25in !important;
   }
   .idea-row__image img {
-    max-height: 2.6in;
+    max-height: 1.6in;
     height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
+  }
+  .idea-row--with-image {
+    grid-template-columns: 1fr 1.1fr !important;
+    gap: 0.2in !important;
   }
 
   /* PROTOTYPE (Poster 4) */
@@ -1072,10 +1076,10 @@ figcaption {
   .flow__image--banner img,
   .flow__image .image-placeholder,
   .flow__image img {
-    max-height: 3.6in !important;
+    max-height: 2.5in !important;
     height: auto !important;
     width: 100% !important;
-    aspect-ratio: 24 / 7 !important;
+    aspect-ratio: 28 / 7 !important;
     object-fit: cover !important;
     background: var(--cream-deep) !important;
   }
@@ -1097,14 +1101,22 @@ figcaption {
   }
   .cards-section .display { color: var(--ink) !important; margin-bottom: 0.15in; }
   .cards-section .eyebrow { color: var(--red) !important; opacity: 1; }
-  .cards-rows { gap: 0.18in; }
+  .cards-rows {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.2in !important;
+  }
   .cards-row__label { font-size: 7.5pt; margin-bottom: 0.06in; }
-  .card-stack { gap: 0.06in 0.08in; }
+  .card-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.05in !important;
+  }
   .card {
-    font-size: 8pt;
-    padding: 0.06in 0.09in;
-    max-width: 2.4in;
-    line-height: 1.25;
+    font-size: 7.5pt;
+    padding: 0.05in 0.08in;
+    max-width: none !important;
+    line-height: 1.2;
     box-shadow: none;
     border: 1px solid var(--line);
     transform: none !important;
@@ -1118,13 +1130,14 @@ figcaption {
   }
   .dev-gallery .image-placeholder,
   .dev-gallery img {
-    max-height: 2in;
+    max-height: 1.4in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .dev-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
+  .dev-gallery figcaption { font-size: 6.5pt; margin-top: 0.03in; text-align: center; }
+  .dev-gallery { margin-top: 0.08in !important; gap: 0.1in !important; }
 
   /* TESTING (Poster 5) */
   #testing { background: var(--cream) !important; }
