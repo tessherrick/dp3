@@ -861,7 +861,7 @@ figcaption {
 
   @page {
     size: 17in 11in;
-    margin: 0.45in;
+    margin: 0;
   }
 
   /* Re-establish the cream backdrop on every printed sheet */
@@ -886,12 +886,35 @@ figcaption {
     break-before: page;
     break-after: page;
     background: var(--cream) !important;
-    padding: 0 !important;
+    padding: 0.4in 0.5in 0.55in !important;
     border-top: none !important;
     margin: 0 !important;
+    min-height: 11in;
+    height: 11in;
+    box-sizing: border-box !important;
+    position: relative;
+    overflow: hidden;
   }
   .hero { page-break-before: avoid; break-before: avoid; } /* first sheet */
   .section:last-of-type { page-break-after: avoid; break-after: avoid; }
+
+  /* Footer band sits at the bottom of every sheet so blank space feels intentional */
+  .hero::after,
+  .section::after {
+    content: "Found Family · A DP3 project by Tess Herrick & Maggie Goldsmith · Stanford Design 1 · 2026";
+    position: absolute;
+    left: 0.5in;
+    right: 0.5in;
+    bottom: 0.22in;
+    padding-top: 0.12in;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-sans);
+    font-size: 7pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-align: center;
+  }
 
   .container {
     max-width: none !important;
