@@ -1099,8 +1099,8 @@ figcaption {
     border-radius: 4px;
     border: 1px solid var(--line);
   }
-  .cards-section .display { color: var(--ink) !important; margin-bottom: 0.15in; }
-  .cards-section .eyebrow { color: var(--red) !important; opacity: 1; }
+  .cards-section .display { display: none !important; }
+  .cards-section .eyebrow { color: var(--red) !important; opacity: 1; margin-bottom: 0.1in !important; }
   .cards-rows {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -1130,14 +1130,15 @@ figcaption {
   }
   .dev-gallery .image-placeholder,
   .dev-gallery img {
-    max-height: 1.4in;
+    max-height: 1in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .dev-gallery figcaption { font-size: 6.5pt; margin-top: 0.03in; text-align: center; }
-  .dev-gallery { margin-top: 0.08in !important; gap: 0.1in !important; }
+  .dev-gallery figcaption { font-size: 6.5pt; margin-top: 0.02in; text-align: center; }
+  .dev-gallery { margin-top: 0.08in !important; gap: 0.08in !important; }
+  .cards-section { margin: 0.1in 0 !important; padding: 0.12in 0.15in !important; }
 
   /* TESTING (Poster 5) */
   #testing { background: var(--cream) !important; }
