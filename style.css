@@ -870,8 +870,8 @@ figcaption {
     color: var(--ink) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    font-size: 10pt;
-    line-height: 1.4;
+    font-size: 13pt;
+    line-height: 1.45;
   }
 
   /* Hide chrome we don't want on paper */
@@ -886,7 +886,7 @@ figcaption {
     break-before: page;
     break-after: page;
     background: var(--cream) !important;
-    padding: 0.4in 0.5in 0.55in !important;
+    padding: 0.55in 0.7in 0.85in !important;
     border-top: none !important;
     margin: 0 !important;
     min-height: 11in;
@@ -903,14 +903,14 @@ figcaption {
   .section::after {
     content: "Found Family · A DP3 project by Tess Herrick & Maggie Goldsmith · Stanford Design 1 · 2026";
     position: absolute;
-    left: 0.5in;
-    right: 0.5in;
-    bottom: 0.22in;
-    padding-top: 0.12in;
+    left: 0.7in;
+    right: 0.7in;
+    bottom: 0.3in;
+    padding-top: 0.15in;
     border-top: 1px solid var(--line);
     font-family: var(--font-sans);
-    font-size: 7pt;
-    letter-spacing: 0.16em;
+    font-size: 9pt;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--red);
     text-align: center;
@@ -922,224 +922,225 @@ figcaption {
     margin: 0 !important;
   }
 
-  /* Section header is compact at the top of each sheet */
+  /* Section header is left-aligned and breathy at the top */
   .section__head {
     text-align: left;
-    margin: 0 0 0.25in !important;
+    margin: 0 0 0.45in !important;
     max-width: none;
   }
   .section__head .display {
-    font-size: 30pt !important;
-    margin-top: 0.05in;
+    font-size: 54pt !important;
+    margin-top: 0.1in;
+    line-height: 1;
   }
   .section__head .eyebrow {
-    font-size: 7.5pt;
+    font-size: 10pt;
     margin: 0;
   }
 
-  /* Display type scaled for print */
-  .display          { font-size: 60pt !important; line-height: 0.98; margin-bottom: 0.18in; }
-  .display--md      { font-size: 30pt !important; }
-  .display--sm      { font-size: 18pt !important; }
-  .eyebrow          { font-size: 7.5pt; margin-bottom: 0.08in; }
-  .kicker           { font-size: 14pt; margin-bottom: 0.06in; }
-  .lede             { font-size: 13pt; max-width: none; margin-bottom: 0.18in; }
-  blockquote        { font-size: 10pt; padding-left: 0.12in; margin-bottom: 0.1in; }
+  /* Display type — match website's bold proportions */
+  .display          { font-size: 84pt !important; line-height: 0.95; margin-bottom: 0.3in; }
+  .display--md      { font-size: 54pt !important; }
+  .display--sm      { font-size: 26pt !important; }
+  .eyebrow          { font-size: 10pt; margin-bottom: 0.14in; }
+  .kicker           { font-size: 22pt; margin-bottom: 0.14in; }
+  .lede             { font-size: 18pt; max-width: none; margin-bottom: 0.3in; line-height: 1.35; }
+  blockquote        { font-size: 13pt; padding-left: 0.16in; margin-bottom: 0.15in; }
 
   /* HERO (Poster 1) */
   .hero__grid {
     display: grid;
     grid-template-columns: 1.05fr 1fr;
-    gap: 0.5in;
+    gap: 0.7in;
     align-items: stretch;
   }
   .hero__copy { padding-top: 0; }
   .callout {
-    margin: 0.18in 0;
-    padding: 0.12in 0.18in;
+    margin: 0.3in 0;
+    padding: 0.25in 0.3in;
   }
-  .callout__text { font-size: 11pt; }
-  .team__list { gap: 0.18in; }
-  .avatar { width: 36px; height: 36px; font-size: 9pt; }
-  .team__name { font-size: 9.5pt; }
+  .callout .eyebrow { margin-bottom: 0.1in; }
+  .callout__text { font-size: 17pt; line-height: 1.3; }
+  .team__list { gap: 0.3in; }
+  .avatar { width: 58px !important; height: 58px !important; font-size: 14pt !important; }
+  .team__name { font-size: 14pt; }
   .hero__image { margin: 0; height: 100%; }
   .hero__image .image-placeholder,
   .hero__image img {
     width: 100%;
-    max-height: 8.5in;
+    max-height: 8.8in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain;
     background: var(--cream-deep) !important;
   }
+  .hero__image figcaption { font-size: 10pt; margin-top: 0.12in; }
 
   /* RESEARCH (Poster 2) */
   #research .three-col {
-    gap: 0.3in;
-    margin-bottom: 0.2in;
+    gap: 0.45in;
+    margin-bottom: 0.35in;
   }
-  #research .three-col .prose p { font-size: 9.5pt; }
+  #research .three-col .prose p { font-size: 12pt; }
   #research .kicker--center {
     text-align: left;
-    margin-top: 0.15in;
-    font-size: 11pt;
+    margin-top: 0.2in;
+    font-size: 17pt;
   }
   .personas {
-    gap: 0.2in;
-    margin-top: 0.05in;
+    gap: 0.3in;
+    margin-top: 0.1in;
   }
   .persona__portrait {
-    padding: 0.05in !important;
-    height: 1.4in;
+    padding: 0.08in !important;
+    height: 1.9in;
     aspect-ratio: 1 / 1;
     background: var(--cream-deep) !important;
     object-fit: contain !important;
   }
-  .persona__name { font-size: 13pt; margin: 0.05in 0; }
-  .persona__bio  { font-size: 8.5pt; margin-bottom: 0.05in; }
-  .persona__quote { font-size: 8pt; margin-bottom: 0.05in; padding-left: 0.08in; }
-  .persona__needs { font-size: 8pt; padding-top: 0.05in; }
+  .persona__name { font-size: 18pt; margin: 0.1in 0; }
+  .persona__bio  { font-size: 11pt; margin-bottom: 0.08in; }
+  .persona__quote { font-size: 11pt; margin-bottom: 0.08in; padding-left: 0.12in; }
+  .persona__needs { font-size: 11pt; padding-top: 0.1in; }
+  .persona__needs .label { font-size: 8pt; }
   .observation {
-    margin-top: 0.15in;
-    padding: 0.15in 0.2in;
+    margin-top: 0.25in;
+    padding: 0.22in 0.28in;
   }
-  .observation .kicker { font-size: 13pt; margin-bottom: 0.06in; }
-  .observation p { font-size: 8.5pt; }
+  .observation .kicker { font-size: 18pt; margin-bottom: 0.1in; }
+  .observation p { font-size: 11pt; }
   .observation--with-image {
     display: grid !important;
     grid-template-columns: 1.3fr 1fr !important;
-    gap: 0.25in !important;
+    gap: 0.3in !important;
   }
   .observation__image img {
-    max-height: 2.4in;
+    max-height: 3in;
     height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .observation__image figcaption { font-size: 7pt; margin-top: 0.04in; }
+  .observation__image figcaption { font-size: 9pt; margin-top: 0.06in; }
 
   /* IDEATION (Poster 3) */
   #ideation { background: var(--cream) !important; }
   #ideation .two-col {
-    gap: 0.3in;
-    margin-bottom: 0.18in;
+    gap: 0.45in;
+    margin-bottom: 0.25in;
   }
-  #ideation .prose p { font-size: 9pt; }
-  .prose-lead { font-size: 11pt; margin-bottom: 0.15in; }
+  #ideation .prose p { font-size: 12pt; }
+  .prose-lead { font-size: 15pt; margin-bottom: 0.25in; }
   .ideation-gallery {
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.1in;
-    margin: 0.1in 0 0.15in;
+    gap: 0.15in;
+    margin: 0.12in 0 0.3in;
   }
   .ideation-gallery--three { grid-template-columns: repeat(3, 1fr) !important; }
   .ideation-gallery .image-placeholder,
   .ideation-gallery img {
-    max-height: 1.7in;
+    max-height: 2.2in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .ideation-gallery figcaption { font-size: 7pt; margin-top: 0.04in; text-align: center; }
-  .ideas-list { gap: 0; margin-top: 0.1in; }
+  .ideation-gallery figcaption { font-size: 9pt; margin-top: 0.06in; text-align: center; }
+  .ideas-list { gap: 0; margin-top: 0.15in; }
   .idea-row {
-    grid-template-columns: 100px 200px 1fr;
-    gap: 0.3in;
-    padding: 0.1in 0;
+    grid-template-columns: 1.3in 2.6in 1fr;
+    gap: 0.35in;
+    padding: 0.13in 0;
   }
-  .idea-row h4 { font-size: 12pt; }
-  .idea-row p  { font-size: 9pt; }
+  .idea-row h4 { font-size: 14pt; }
+  .idea-row p  { font-size: 11pt; }
   .idea-row--featured {
-    padding: 0.18in 0.2in;
-    margin-top: 0.08in;
+    padding: 0.25in 0.3in;
+    margin-top: 0.15in;
   }
-  .idea-row--featured h4 { font-size: 16pt; }
-  .idea__why { font-size: 8.5pt; }
+  .idea-row--featured h4 { font-size: 22pt; }
+  .idea__why { font-size: 11pt; }
+  .idea__why .label { font-size: 8pt; }
   .idea-row--with-image {
     display: grid !important;
-    grid-template-columns: 1.2fr 0.9fr !important;
-    gap: 0.25in !important;
+    grid-template-columns: 1fr 1.1fr !important;
+    gap: 0.3in !important;
   }
   .idea-row__image img {
-    max-height: 1.6in;
+    max-height: 2.5in;
     height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
-  }
-  .idea-row--with-image {
-    grid-template-columns: 1fr 1.1fr !important;
-    gap: 0.2in !important;
   }
 
   /* PROTOTYPE (Poster 4) */
   .flow {
     display: block !important;
-    margin: 0.1in 0 0.2in;
+    margin: 0.15in 0 0.3in;
   }
-  .flow--stacked > * + * { margin-top: 0.18in !important; }
+  .flow--stacked > * + * { margin-top: 0.3in !important; }
   .flow__steps--row {
     grid-template-columns: repeat(4, 1fr) !important;
-    gap: 0.22in !important;
+    gap: 0.35in !important;
     display: grid !important;
   }
   .flow__steps--row li {
     display: block !important;
     grid-template-columns: none !important;
-    padding: 0.08in 0 0 !important;
-    border-top: 1.5pt solid var(--ink) !important;
+    padding: 0.15in 0 0 !important;
+    border-top: 2pt solid var(--ink) !important;
     border-bottom: none !important;
   }
-  .flow__num { font-size: 14pt; display: block; margin-bottom: 0.04in; }
-  .flow__steps h4 { font-size: 11pt; margin-bottom: 0.04in; }
-  .flow__steps p  { font-size: 8.5pt; }
+  .flow__num { font-size: 20pt; display: block; margin-bottom: 0.1in; }
+  .flow__steps h4 { font-size: 15pt; margin-bottom: 0.08in; }
+  .flow__steps p  { font-size: 11pt; }
   .flow__image--banner img,
   .flow__image .image-placeholder,
   .flow__image img {
-    max-height: 2.5in !important;
+    max-height: 3.5in !important;
     height: auto !important;
     width: 100% !important;
     aspect-ratio: 28 / 7 !important;
     object-fit: cover !important;
     background: var(--cream-deep) !important;
   }
-  .flow__image--banner figcaption { font-size: 7pt; margin-top: 0.04in; }
+  .flow__image--banner figcaption { font-size: 9pt; margin-top: 0.06in; }
   #prototype .two-col {
-    gap: 0.3in;
-    margin-bottom: 0.15in;
+    gap: 0.4in;
+    margin-bottom: 0.2in;
   }
-  #prototype .prose p { font-size: 9pt; }
+  #prototype .prose p { font-size: 12pt; }
 
   /* Conversation cards: lighter for print (no dark inversion)  */
   .cards-section {
-    margin: 0.15in 0;
-    padding: 0.18in 0.2in;
+    margin: 0.2in 0 !important;
+    padding: 0.22in 0.28in !important;
     background: var(--cream-deep) !important;
     color: var(--ink) !important;
     border-radius: 4px;
     border: 1px solid var(--line);
   }
   .cards-section .display { display: none !important; }
-  .cards-section .eyebrow { color: var(--red) !important; opacity: 1; margin-bottom: 0.1in !important; }
+  .cards-section .eyebrow { color: var(--red) !important; opacity: 1; margin-bottom: 0.12in !important; }
   .cards-rows {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 0.2in !important;
+    gap: 0.3in !important;
   }
-  .cards-row__label { font-size: 7.5pt; margin-bottom: 0.06in; }
+  .cards-row__label { font-size: 9pt; margin-bottom: 0.08in; }
   .card-stack {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.05in !important;
+    gap: 0.07in !important;
   }
   .card {
-    font-size: 7.5pt;
-    padding: 0.05in 0.08in;
+    font-size: 9.5pt;
+    padding: 0.07in 0.1in;
     max-width: none !important;
-    line-height: 1.2;
+    line-height: 1.25;
     box-shadow: none;
     border: 1px solid var(--line);
     transform: none !important;
@@ -1148,33 +1149,31 @@ figcaption {
   .card--c { background: #F7EFDB !important; }
   .dev-gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.1in;
-    margin-top: 0.1in;
+    gap: 0.15in !important;
+    margin-top: 0.18in !important;
   }
   .dev-gallery .image-placeholder,
   .dev-gallery img {
-    max-height: 1in;
+    max-height: 1.4in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .dev-gallery figcaption { font-size: 6.5pt; margin-top: 0.02in; text-align: center; }
-  .dev-gallery { margin-top: 0.08in !important; gap: 0.08in !important; }
-  .cards-section { margin: 0.1in 0 !important; padding: 0.12in 0.15in !important; }
+  .dev-gallery figcaption { font-size: 8pt; margin-top: 0.04in; text-align: center; }
 
   /* TESTING (Poster 5) */
   #testing { background: var(--cream) !important; }
   #testing .two-col {
-    gap: 0.3in;
-    margin-bottom: 0.18in;
+    gap: 0.45in;
+    margin-bottom: 0.3in;
   }
-  #testing .prose p { font-size: 9pt; }
-  .meta-list { font-size: 9pt; gap: 0.04in 0.18in; margin-top: 0.1in; }
-  .meta-list dt { font-size: 7pt; }
+  #testing .prose p { font-size: 12pt; }
+  .meta-list { font-size: 11pt; gap: 0.06in 0.3in; margin-top: 0.18in; }
+  .meta-list dt { font-size: 9pt; }
   #testing .hero__image .image-placeholder,
   #testing .hero__image img {
-    max-height: 4.5in;
+    max-height: 4.8in;
     height: auto !important;
     width: 100%;
     aspect-ratio: auto !important;
@@ -1182,32 +1181,33 @@ figcaption {
     background: var(--cream-deep) !important;
   }
   .next-steps {
-    margin-top: 0.15in;
-    padding: 0.15in 0.2in;
+    margin-top: 0.25in;
+    padding: 0.25in 0.35in;
   }
-  .next-steps p { font-size: 9pt; max-width: none; }
+  .next-steps p { font-size: 13pt; max-width: none; }
 
   /* Stats grid for print */
   .stats {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 0.15in !important;
-    margin: 0.15in 0 !important;
+    gap: 0.25in !important;
+    margin: 0.25in 0 !important;
   }
   .stat {
-    padding: 0.12in 0.18in 0.1in !important;
+    padding: 0.22in 0.28in 0.18in !important;
     background: var(--cream) !important;
   }
-  .stat__num { font-size: 22pt !important; margin-bottom: 0.04in; }
-  .stat__label { font-size: 7.5pt; max-width: 18ch; }
+  .stat__num { font-size: 40pt !important; margin-bottom: 0.1in; }
+  .stat__label { font-size: 10pt; max-width: 22ch; }
 
   .big-quote {
-    font-size: 14pt !important;
-    margin: 0.15in 0 !important;
+    font-size: 24pt !important;
+    margin: 0.25in 0 !important;
     max-width: 32ch;
+    line-height: 1.2;
   }
-  .big-quote cite { font-size: 6.5pt; margin-top: 0.06in; }
-  .findings-analysis { margin: 0.1in 0 0; }
-  .findings-analysis p { font-size: 8.5pt; }
+  .big-quote cite { font-size: 8pt; margin-top: 0.12in; }
+  .findings-analysis { margin: 0.15in 0 0; }
+  .findings-analysis p { font-size: 12pt; }
 
   /* Image placeholders for unfilled slots: subtle, not loud */
   .image-placeholder {
