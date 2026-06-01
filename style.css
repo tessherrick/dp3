@@ -870,8 +870,8 @@ figcaption {
     color: var(--ink) !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    font-size: 13pt;
-    line-height: 1.45;
+    font-size: 11.5pt;
+    line-height: 1.4;
   }
 
   /* Hide chrome we don't want on paper */
@@ -886,7 +886,7 @@ figcaption {
     break-before: page;
     break-after: page;
     background: var(--cream) !important;
-    padding: 0.55in 0.7in 0.85in !important;
+    padding: 0.5in 0.65in 0.75in !important;
     border-top: none !important;
     margin: 0 !important;
     min-height: 11in;
@@ -925,27 +925,27 @@ figcaption {
   /* Section header is left-aligned and breathy at the top */
   .section__head {
     text-align: left;
-    margin: 0 0 0.45in !important;
+    margin: 0 0 0.32in !important;
     max-width: none;
   }
   .section__head .display {
-    font-size: 54pt !important;
-    margin-top: 0.1in;
+    font-size: 44pt !important;
+    margin-top: 0.08in;
     line-height: 1;
   }
   .section__head .eyebrow {
-    font-size: 10pt;
+    font-size: 9pt;
     margin: 0;
   }
 
-  /* Display type — match website's bold proportions */
-  .display          { font-size: 84pt !important; line-height: 0.95; margin-bottom: 0.3in; }
-  .display--md      { font-size: 54pt !important; }
-  .display--sm      { font-size: 26pt !important; }
-  .eyebrow          { font-size: 10pt; margin-bottom: 0.14in; }
-  .kicker           { font-size: 22pt; margin-bottom: 0.14in; }
-  .lede             { font-size: 18pt; max-width: none; margin-bottom: 0.3in; line-height: 1.35; }
-  blockquote        { font-size: 13pt; padding-left: 0.16in; margin-bottom: 0.15in; }
+  /* Display type — bold but tuned for fit */
+  .display          { font-size: 72pt !important; line-height: 0.95; margin-bottom: 0.22in; }
+  .display--md      { font-size: 44pt !important; }
+  .display--sm      { font-size: 22pt !important; }
+  .eyebrow          { font-size: 9pt; margin-bottom: 0.1in; }
+  .kicker           { font-size: 18pt; margin-bottom: 0.1in; }
+  .lede             { font-size: 16pt; max-width: none; margin-bottom: 0.22in; line-height: 1.32; }
+  blockquote        { font-size: 11.5pt; padding-left: 0.14in; margin-bottom: 0.12in; }
 
   /* HERO (Poster 1) */
   .hero__grid {
@@ -956,14 +956,14 @@ figcaption {
   }
   .hero__copy { padding-top: 0; }
   .callout {
-    margin: 0.3in 0;
-    padding: 0.25in 0.3in;
+    margin: 0.22in 0;
+    padding: 0.2in 0.24in;
   }
-  .callout .eyebrow { margin-bottom: 0.1in; }
-  .callout__text { font-size: 17pt; line-height: 1.3; }
-  .team__list { gap: 0.3in; }
-  .avatar { width: 58px !important; height: 58px !important; font-size: 14pt !important; }
-  .team__name { font-size: 14pt; }
+  .callout .eyebrow { margin-bottom: 0.08in; }
+  .callout__text { font-size: 14.5pt; line-height: 1.3; }
+  .team__list { gap: 0.25in; }
+  .avatar { width: 48px !important; height: 48px !important; font-size: 12pt !important; }
+  .team__name { font-size: 12pt; }
   .hero__image { margin: 0; height: 100%; }
   .hero__image .image-placeholder,
   .hero__image img {
@@ -978,97 +978,97 @@ figcaption {
 
   /* RESEARCH (Poster 2) */
   #research .three-col {
-    gap: 0.45in;
-    margin-bottom: 0.35in;
+    gap: 0.35in;
+    margin-bottom: 0.22in;
   }
-  #research .three-col .prose p { font-size: 12pt; }
+  #research .three-col .prose p { font-size: 11pt; }
   #research .kicker--center {
     text-align: left;
-    margin-top: 0.2in;
-    font-size: 17pt;
+    margin-top: 0.12in;
+    font-size: 15pt;
   }
   .personas {
-    gap: 0.3in;
-    margin-top: 0.1in;
+    gap: 0.25in;
+    margin-top: 0.08in;
   }
   .persona__portrait {
-    padding: 0.08in !important;
-    height: 1.9in;
+    padding: 0.06in !important;
+    height: 1.5in;
     aspect-ratio: 1 / 1;
     background: var(--cream-deep) !important;
     object-fit: contain !important;
   }
-  .persona__name { font-size: 18pt; margin: 0.1in 0; }
-  .persona__bio  { font-size: 11pt; margin-bottom: 0.08in; }
-  .persona__quote { font-size: 11pt; margin-bottom: 0.08in; padding-left: 0.12in; }
-  .persona__needs { font-size: 11pt; padding-top: 0.1in; }
-  .persona__needs .label { font-size: 8pt; }
+  .persona__name { font-size: 16pt; margin: 0.08in 0 0.06in; }
+  .persona__bio  { font-size: 10pt; margin-bottom: 0.06in; }
+  .persona__quote { font-size: 9.5pt; margin-bottom: 0.06in; padding-left: 0.1in; }
+  .persona__needs { font-size: 10pt; padding-top: 0.08in; }
+  .persona__needs .label { font-size: 7.5pt; }
   .observation {
-    margin-top: 0.25in;
-    padding: 0.22in 0.28in;
+    margin-top: 0.18in;
+    padding: 0.18in 0.22in;
   }
-  .observation .kicker { font-size: 18pt; margin-bottom: 0.1in; }
-  .observation p { font-size: 11pt; }
+  .observation .kicker { font-size: 16pt; margin-bottom: 0.08in; }
+  .observation p { font-size: 10pt; }
   .observation--with-image {
     display: grid !important;
     grid-template-columns: 1.3fr 1fr !important;
-    gap: 0.3in !important;
+    gap: 0.25in !important;
   }
   .observation__image img {
-    max-height: 3in;
+    max-height: 2.2in;
     height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .observation__image figcaption { font-size: 9pt; margin-top: 0.06in; }
+  .observation__image figcaption { font-size: 8pt; margin-top: 0.04in; }
 
   /* IDEATION (Poster 3) */
   #ideation { background: var(--cream) !important; }
   #ideation .two-col {
-    gap: 0.45in;
-    margin-bottom: 0.25in;
+    gap: 0.35in;
+    margin-bottom: 0.18in;
   }
-  #ideation .prose p { font-size: 12pt; }
-  .prose-lead { font-size: 15pt; margin-bottom: 0.25in; }
+  #ideation .prose p { font-size: 10.5pt; }
+  .prose-lead { font-size: 13pt; margin-bottom: 0.15in; }
   .ideation-gallery {
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.15in;
-    margin: 0.12in 0 0.3in;
+    gap: 0.12in;
+    margin: 0.1in 0 0.2in;
   }
   .ideation-gallery--three { grid-template-columns: repeat(3, 1fr) !important; }
   .ideation-gallery .image-placeholder,
   .ideation-gallery img {
-    max-height: 2.2in;
+    max-height: 1.7in;
     height: auto !important;
     aspect-ratio: auto !important;
     object-fit: contain !important;
     background: var(--cream-deep) !important;
   }
-  .ideation-gallery figcaption { font-size: 9pt; margin-top: 0.06in; text-align: center; }
-  .ideas-list { gap: 0; margin-top: 0.15in; }
+  .ideation-gallery figcaption { font-size: 8pt; margin-top: 0.04in; text-align: center; }
+  .ideas-list { gap: 0; margin-top: 0.1in; }
   .idea-row {
-    grid-template-columns: 1.3in 2.6in 1fr;
-    gap: 0.35in;
-    padding: 0.13in 0;
+    grid-template-columns: 1in 2.2in 1fr;
+    gap: 0.28in;
+    padding: 0.1in 0;
   }
-  .idea-row h4 { font-size: 14pt; }
-  .idea-row p  { font-size: 11pt; }
+  .idea-row h4 { font-size: 12pt; }
+  .idea-row p  { font-size: 10pt; }
   .idea-row--featured {
-    padding: 0.25in 0.3in;
-    margin-top: 0.15in;
+    padding: 0.18in 0.22in;
+    margin-top: 0.1in;
   }
-  .idea-row--featured h4 { font-size: 22pt; }
-  .idea__why { font-size: 11pt; }
-  .idea__why .label { font-size: 8pt; }
+  .idea-row--featured h4 { font-size: 18pt; }
+  .idea__why { font-size: 10pt; }
+  .idea__why .label { font-size: 7.5pt; }
   .idea-row--with-image {
     display: grid !important;
     grid-template-columns: 1fr 1.1fr !important;
-    gap: 0.3in !important;
+    gap: 0.22in !important;
   }
   .idea-row__image img {
-    max-height: 2.5in;
+    max-height: 1.8in;
     height: auto !important;
     aspect-ratio: auto !important;
     width: 100%;
@@ -1076,31 +1076,31 @@ figcaption {
     background: var(--cream-deep) !important;
   }
 
-  /* PROTOTYPE (Poster 4) */
+  /* PROTOTYPE (Poster 4) — keep it focused: banner + 4 steps + dev/iter text only */
   .flow {
     display: block !important;
-    margin: 0.15in 0 0.3in;
+    margin: 0.15in 0 0.25in;
   }
-  .flow--stacked > * + * { margin-top: 0.3in !important; }
+  .flow--stacked > * + * { margin-top: 0.25in !important; }
   .flow__steps--row {
     grid-template-columns: repeat(4, 1fr) !important;
-    gap: 0.35in !important;
+    gap: 0.3in !important;
     display: grid !important;
   }
   .flow__steps--row li {
     display: block !important;
     grid-template-columns: none !important;
-    padding: 0.15in 0 0 !important;
+    padding: 0.12in 0 0 !important;
     border-top: 2pt solid var(--ink) !important;
     border-bottom: none !important;
   }
-  .flow__num { font-size: 20pt; display: block; margin-bottom: 0.1in; }
-  .flow__steps h4 { font-size: 15pt; margin-bottom: 0.08in; }
-  .flow__steps p  { font-size: 11pt; }
+  .flow__num { font-size: 18pt; display: block; margin-bottom: 0.08in; }
+  .flow__steps h4 { font-size: 14pt; margin-bottom: 0.07in; }
+  .flow__steps p  { font-size: 10pt; }
   .flow__image--banner img,
   .flow__image .image-placeholder,
   .flow__image img {
-    max-height: 3.5in !important;
+    max-height: 4in !important;
     height: auto !important;
     width: 100% !important;
     aspect-ratio: 28 / 7 !important;
@@ -1112,7 +1112,13 @@ figcaption {
     gap: 0.4in;
     margin-bottom: 0.2in;
   }
-  #prototype .prose p { font-size: 12pt; }
+  #prototype .prose p { font-size: 11pt; }
+
+  /* Drop the bulky cards section and dev gallery from print so the 4 steps can breathe.
+     The cards content is preserved in the conversation flow narrative; the dev images
+     stay on the live site. */
+  #prototype .cards-section,
+  #prototype .dev-gallery { display: none !important; }
 
   /* Conversation cards: lighter for print (no dark inversion)  */
   .cards-section {
@@ -1165,15 +1171,15 @@ figcaption {
   /* TESTING (Poster 5) */
   #testing { background: var(--cream) !important; }
   #testing .two-col {
-    gap: 0.45in;
-    margin-bottom: 0.3in;
+    gap: 0.35in;
+    margin-bottom: 0.2in;
   }
-  #testing .prose p { font-size: 12pt; }
-  .meta-list { font-size: 11pt; gap: 0.06in 0.3in; margin-top: 0.18in; }
-  .meta-list dt { font-size: 9pt; }
+  #testing .prose p { font-size: 11pt; }
+  .meta-list { font-size: 10pt; gap: 0.05in 0.25in; margin-top: 0.12in; }
+  .meta-list dt { font-size: 8pt; }
   #testing .hero__image .image-placeholder,
   #testing .hero__image img {
-    max-height: 4.8in;
+    max-height: 3.4in;
     height: auto !important;
     width: 100%;
     aspect-ratio: auto !important;
@@ -1181,33 +1187,33 @@ figcaption {
     background: var(--cream-deep) !important;
   }
   .next-steps {
-    margin-top: 0.25in;
-    padding: 0.25in 0.35in;
+    margin-top: 0.18in;
+    padding: 0.2in 0.28in;
   }
-  .next-steps p { font-size: 13pt; max-width: none; }
+  .next-steps p { font-size: 11pt; max-width: none; }
 
   /* Stats grid for print */
   .stats {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 0.25in !important;
-    margin: 0.25in 0 !important;
+    gap: 0.2in !important;
+    margin: 0.2in 0 !important;
   }
   .stat {
-    padding: 0.22in 0.28in 0.18in !important;
+    padding: 0.18in 0.22in 0.14in !important;
     background: var(--cream) !important;
   }
-  .stat__num { font-size: 40pt !important; margin-bottom: 0.1in; }
-  .stat__label { font-size: 10pt; max-width: 22ch; }
+  .stat__num { font-size: 32pt !important; margin-bottom: 0.08in; }
+  .stat__label { font-size: 9pt; max-width: 22ch; }
 
   .big-quote {
-    font-size: 24pt !important;
-    margin: 0.25in 0 !important;
-    max-width: 32ch;
+    font-size: 20pt !important;
+    margin: 0.2in 0 !important;
+    max-width: 36ch;
     line-height: 1.2;
   }
-  .big-quote cite { font-size: 8pt; margin-top: 0.12in; }
-  .findings-analysis { margin: 0.15in 0 0; }
-  .findings-analysis p { font-size: 12pt; }
+  .big-quote cite { font-size: 7.5pt; margin-top: 0.1in; }
+  .findings-analysis { margin: 0.12in 0 0; }
+  .findings-analysis p { font-size: 10.5pt; }
 
   /* Image placeholders for unfilled slots: subtle, not loud */
   .image-placeholder {
